@@ -1,0 +1,15 @@
+# Output(dict) <- Input(List)
+ff14.tsv:
+  - general.tsv
+  - ff14.tsv
+  - ff14_place.tsv
+  - ff14_battlecontents.tsv
+  - ff14_place.tsv
+  - ff14_classname.tsv
+  - ff14_roleskill.tsv
+  - ff14_jobname_and_skillname.tsv
+  - ff14_bossname.tsv
+  - ff14_world.tsv
+borderbreak.tsv:
+  - general.tsv
+  - borderbreak.tsv
