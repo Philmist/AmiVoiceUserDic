@@ -91,6 +91,7 @@ async def upload(
         s_result = await ws.recv()
         if not isinstance(s_result, str):
             logger.error("WS: s error -> return binaryFrame")
+            await ws.close()
         elif len(s_result) > 3:
             logger.error("WS: s error -> %s", s_result.lstrip("s "))
         else:
@@ -106,6 +107,9 @@ async def upload(
                     if (len(e_result) > 2) and (e_result[0] == "e"):
                         logger.error("WS: return e -> %s", e_result)
                         break
+                else:
+                    logger.error("WS: e error -> return binaryFrame")
+                    break
 
 
 def main():
