@@ -1,5 +1,5 @@
 """
-出力先にある辞書か指定された辞書をAmiVoiceCloudにアップロードする
+指定された辞書をAmiVoiceCloudにアップロードする
 """
 
 import os
