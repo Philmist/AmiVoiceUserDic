@@ -13,9 +13,9 @@ ff14.tsv:
   - ff14\ff14_world.tsv
 borderbreak.tsv:
   - general\general.tsv
-  - borderbreak.tsv
+  - borderbreak\borderbreak.tsv
 eternalreturn.tsv:
   - general\general.tsv
-  - eternalreturn.tsv
+  - eternalreturn\eternalreturn.tsv
 general.tsv:
   - general\general.tsv
