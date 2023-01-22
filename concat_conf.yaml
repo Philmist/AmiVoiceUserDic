@@ -1,21 +1,21 @@
 # Output(dict) <- Input(List)
 ff14.tsv:
   - general\general.tsv
-  - ff14\ff14.tsv
-  - ff14\ff14_place.tsv
-  - ff14\ff14_people.tsv
-  - ff14\ff14_battlecontents.tsv
-  - ff14\ff14_classname.tsv
-  - ff14\ff14_roleskill.tsv
-  - ff14\ff14_jobname_and_skillname.tsv
-  - ff14\ff14_gatherer_crafter.tsv
-  - ff14\ff14_bossname.tsv
-  - ff14\ff14_world.tsv
+  - dict\ff14\ff14.tsv
+  - dict\ff14\ff14_place.tsv
+  - dict\ff14\ff14_people.tsv
+  - dict\ff14\ff14_battlecontents.tsv
+  - dict\ff14\ff14_classname.tsv
+  - dict\ff14\ff14_roleskill.tsv
+  - dict\ff14\ff14_jobname_and_skillname.tsv
+  - dict\ff14\ff14_gatherer_crafter.tsv
+  - dict\ff14\ff14_bossname.tsv
+  - dict\ff14\ff14_world.tsv
 borderbreak.tsv:
   - general\general.tsv
-  - borderbreak\borderbreak.tsv
+  - dict\borderbreak\borderbreak.tsv
 eternalreturn.tsv:
   - general\general.tsv
-  - eternalreturn\eternalreturn.tsv
+  - dict\eternalreturn\eternalreturn.tsv
 general.tsv:
   - general\general.tsv
