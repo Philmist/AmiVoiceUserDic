@@ -14,6 +14,8 @@ ff14.tsv:
 borderbreak.tsv:
   - general\general.tsv
   - dict\borderbreak\borderbreak.tsv
+  - dict\borderbreak\bb_place.tsv
+  - dict\borderbreak\bb_weapon_and_parts.tsv
 eternalreturn.tsv:
   - general\general.tsv
   - dict\eternalreturn\eternalreturn.tsv
