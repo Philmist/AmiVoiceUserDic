@@ -124,7 +124,11 @@ def main():
         default="-a-general",
     )
     argparser.add_argument(
-        "dictpath", nargs="+", help="tsv file(s) to register.", type=str
+        "dictpath",
+        nargs="*",
+        help="tsv file(s) to register.",
+        type=str,
+        default=[r"./out/*.tsv"],
     )
     args = argparser.parse_args()
     dictpath: str = vars(args)["dictpath"]

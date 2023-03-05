@@ -58,11 +58,12 @@ appkeyを省略する場合には`AMIVOICE_APPKEY`環境変数に使用するAPP
 grammarを省略した場合は`-a-general`(会話_汎用)が指定されたものと見なします。
 
 辞書ファイルの指定にはワイルドカードが使用可能です。
-したがって一番短い例は以下になります。
 
 ```powershell
 python .\upload_dict.py .\out\*.tsv
 ```
+
+辞書ファイルの指定も省略した場合は`.\out\*.tsv`が指定されたと見なします。
 
 ### `atokdic_to_amivoicetsv.py`
 
