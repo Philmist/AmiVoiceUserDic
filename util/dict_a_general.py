@@ -2,7 +2,6 @@
 AmiVoice Cloudの-a-general用辞書を扱うクラス
 """
 import io
-import typing
 import unicodedata
 from . import dict_abc
 
@@ -34,6 +33,9 @@ class AmiVoiceDictAGeneral(dict_abc.AmiVoiceDictUtilBase):
         読みの文字として禁止された文字であるかを判定する。
         もし禁止された文字であれば True を返す。
         chr_codeは文字コードである(ord関数で文字コードに変換できる)。
+
+        :param int chr_code: 検査する文字の文字コード
+        :return: 読みの文字として許容されるならTrue
         """
         try:
             s = chr(chr_code)
@@ -51,8 +53,12 @@ class AmiVoiceDictAGeneral(dict_abc.AmiVoiceDictUtilBase):
             return False
 
     @classmethod
-    def _check_class_name(cls, class_name) -> bool:
-        """指定されたクラスが正しいものか確認する"""
+    def _check_class_name(cls, class_name: str) -> bool:
+        """指定されたクラスが正しいものか確認する
+
+        :param str class_name: 単語のクラス
+        :return: このエンジンのクラスとして許容されるならTrue
+        """
         return any(class_name == i for i in cls._CLASS_NAMES)
 
     def readdict_from_textio(self, stream: io.TextIOBase) \
@@ -66,6 +72,8 @@ class AmiVoiceDictAGeneral(dict_abc.AmiVoiceDictUtilBase):
         行の先頭に'#'(シャープ)マークがあった場合は単に無視する。
         返り値は不正な値があった行番号と内容のリスト。
         エラーがなければ長さ0のリストが返る。
+
+        :param stream: TSVを読み込むTextIO
         """
         line_num = 0
         self._errors = []
@@ -92,14 +100,14 @@ class AmiVoiceDictAGeneral(dict_abc.AmiVoiceDictUtilBase):
             # 読みに不正な文字が使われていないか検査する
             is_yomi_valid = all(self._check_yomi_chr(ord(i)) for i in yomi)
             if is_yomi_valid is False:
-                self._errors.append((line_num, "Invalid yomi string."))
+                self._errors.append((line_num, f"Invalid yomi string: {yomi}"))
                 continue
 
             # クラス名が不正でないか検査する
             is_class_valid = self._check_class_name(class_name)
             if is_class_valid is False:
                 self._errors.append(
-                    (line_num, f"Invalid class name:{class_name}")
+                    (line_num, f"Invalid class name: {class_name}")
                 )
                 continue
 

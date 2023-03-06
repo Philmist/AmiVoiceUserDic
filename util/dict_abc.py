@@ -3,7 +3,6 @@ AmiVoice Cloud用辞書ユーティリティ用の抽象クラス
 """
 
 import io
-import typing
 from abc import ABC, abstractmethod
 
 
@@ -23,13 +22,21 @@ class AmiVoiceDictUtilBase(ABC):
         return cls._ENGINE_NAME
 
     @abstractmethod
-    def readdict_from_textio(self, stream: io.TextIOBase) -> list[tuple[int, str]]:
-        """渡されたTextIOストリームから辞書データを読みこむ"""
+    def readdict_from_textio(self, stream: io.TextIOBase) \
+            -> list[tuple[int, str]]:
+        """渡されたTextIOストリームから辞書データを読みこむ
+
+        :param stream: TSVを読み込むTextIO
+        :return: エラーが発見された行番号と内容のタプルのリスト
+        """
         raise NotImplementedError()
 
     @abstractmethod
     def get_errors(self) -> list[tuple[int, str]]:
-        """読み込まれたデータにエラーが発見されていた場合それを返す"""
+        """読み込まれたデータにエラーが発見されていた場合それを返す
+
+        :return: エラーが発見された行番号と内容のタプルのリスト
+        """
         raise NotImplementedError()
 
     @abstractmethod
@@ -38,5 +45,6 @@ class AmiVoiceDictUtilBase(ABC):
 
         自身に読み込まれたデータをTSV形式の文字列で返す。
         このデータは直接AmiVoice Cloudの辞書登録で使えるものでなくてはならない。
+        :return: TSV形式の辞書用文字列
         """
         raise NotImplementedError()
