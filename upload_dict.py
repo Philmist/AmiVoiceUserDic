@@ -70,9 +70,13 @@ async def upload(
 
     profile_id = profile_id.lstrip(":")
 
+    logger.info("length: %d", len(source))
+
     register_str: str = functools.reduce(
         lambda l, r: (
-            l + "|" + functools.reduce(lambda il, ir: il + " " + ir, r, "").strip()
+            l + "|" + functools.reduce(
+                lambda il, ir: il + " " + ir, r, ""
+            ).strip()
         ),
         source,
         "",
@@ -124,7 +128,11 @@ def main():
         default="-a-general",
     )
     argparser.add_argument(
-        "dictpath", nargs="+", help="tsv file(s) to register.", type=str
+        "dictpath",
+        nargs="*",
+        help="tsv file(s) to register.",
+        type=str,
+        default=[r"./out/*.tsv"],
     )
     args = argparser.parse_args()
     dictpath: str = vars(args)["dictpath"]

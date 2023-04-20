@@ -14,8 +14,24 @@ ff14.tsv:
 borderbreak.tsv:
   - general\general.tsv
   - dict\borderbreak\borderbreak.tsv
+  - dict\borderbreak\bb_place.tsv
+  - dict\borderbreak\bb_weapon_and_parts.tsv
 eternalreturn.tsv:
   - general\general.tsv
   - dict\eternalreturn\eternalreturn.tsv
+arknights.tsv:
+  - general\general.tsv
+  - dict\arknights\arknights_class.tsv
+  - dict\arknights\arknights_operator_rare1.tsv
+  - dict\arknights\arknights_operator_rare2.tsv
+  - dict\arknights\arknights_operator_rare3.tsv
+  - dict\arknights\arknights_operator_rare4.tsv
+  - dict\arknights\arknights_operator_rare5.tsv
+  - dict\arknights\arknights_operator_rare6.tsv
+  - dict\arknights\arknights_quarters.tsv
+  - dict\arknights\arknights_race.tsv
+  - dict\arknights\arknights_scenario_people.tsv
+  - dict\arknights\arknights_system.tsv
+  - dict\arknights\arknights_world.tsv
 general.tsv:
   - general\general.tsv
