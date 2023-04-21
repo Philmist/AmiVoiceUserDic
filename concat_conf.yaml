@@ -1,6 +1,7 @@
 # Output(dict) <- Input(List)
 ff14.tsv:
-  - general\general.tsv
+  - private.tsv
+  - general\*.tsv
   - dict\ff14\ff14.tsv
   - dict\ff14\ff14_place.tsv
   - dict\ff14\ff14_people.tsv
@@ -12,15 +13,18 @@ ff14.tsv:
   - dict\ff14\ff14_bossname.tsv
   - dict\ff14\ff14_world.tsv
 borderbreak.tsv:
-  - general\general.tsv
+  - private.tsv
+  - general\*.tsv
   - dict\borderbreak\borderbreak.tsv
   - dict\borderbreak\bb_place.tsv
   - dict\borderbreak\bb_weapon_and_parts.tsv
 eternalreturn.tsv:
-  - general\general.tsv
+  - private.tsv
+  - general\*.tsv
   - dict\eternalreturn\eternalreturn.tsv
 arknights.tsv:
-  - general\general.tsv
+  - private.tsv
+  - general\*.tsv
   - dict\arknights\arknights_class.tsv
   - dict\arknights\arknights_operator_rare1.tsv
   - dict\arknights\arknights_operator_rare2.tsv
@@ -34,4 +38,5 @@ arknights.tsv:
   - dict\arknights\arknights_system.tsv
   - dict\arknights\arknights_world.tsv
 general.tsv:
-  - general\general.tsv
+  - private.tsv
+  - general\*.tsv
