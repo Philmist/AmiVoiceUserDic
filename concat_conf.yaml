@@ -19,9 +19,8 @@ borderbreak.tsv:
   - dict\borderbreak\bb_place.tsv
   - dict\borderbreak\bb_weapon_and_parts.tsv
 eternalreturn.tsv:
-  - private.tsv
   - general\*.tsv
-  - dict\eternalreturn\eternalreturn.tsv
+  - dict\eternalreturn\*.tsv
 arknights.tsv:
   - private.tsv
   - general\*.tsv
