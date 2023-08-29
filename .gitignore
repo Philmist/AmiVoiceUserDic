@@ -2,6 +2,6 @@ __pycache__
 .mypy_cache
 env
 *.stats
-private.*
-dict/private.*
+private*
+dict/private*
 dict/private/**
